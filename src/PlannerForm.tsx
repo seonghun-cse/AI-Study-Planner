@@ -21,7 +21,7 @@ function PlannerForm({ onSubmit }: PlannerFormProps) {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <label>
-        무엇을 공부할까요???????
+        무엇을 공부할까요???????ㄴㄴㄴㄴ
         <input
           name="subject"
           type="text"
