@@ -1,27 +1,27 @@
 type PlannerFormProps = {
-  onSubmit: (subject: string, days: number) => void
-}
+  onSubmit: (subject: string, days: number) => void;
+};
 
 function PlannerForm({ onSubmit }: PlannerFormProps) {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
+    event.preventDefault();
 
-    const form = event.currentTarget
-    const data = new FormData(form)
-    const subject = String(data.get('subject') ?? '').trim()
-    const days = Number(data.get('days'))
+    const form = event.currentTarget;
+    const data = new FormData(form);
+    const subject = String(data.get("subject") ?? "").trim();
+    const days = Number(data.get("days"));
 
     if (!subject || days < 1) {
-      return
+      return;
     }
 
-    onSubmit(subject, days)
+    onSubmit(subject, days);
   }
 
   return (
     <form className="form" onSubmit={handleSubmit}>
       <label>
-        무엇을 공부할까요?
+        무엇을 공부할까요???????
         <input
           name="subject"
           type="text"
@@ -37,7 +37,7 @@ function PlannerForm({ onSubmit }: PlannerFormProps) {
 
       <button type="submit">계획 만들기</button>
     </form>
-  )
+  );
 }
 
-export default PlannerForm
+export default PlannerForm;
